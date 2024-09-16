@@ -59,4 +59,21 @@ After comparing six regression models, we concluded that **Optimal_RandomForest*
 
 Feel free to reach out through the following platforms:
 
-- **[GitHub](
+- **[GitHub](https://github.com/YourProfile)**
+- **Email: your.email@example.com**
+- **[Twitter](https://twitter.com/yourprofile)**
+- **[LinkedIn](https://www.linkedin.com/in/yourprofile/)**
+
+--------------------------------------------------------------------------------------------
+
+## 📚 References
+
+- [Python Documentation](https://docs.python.org/)
+- [Pandas Documentation](https://pandas.pydata.org/pandas-docs/stable/)
+- [Seaborn Documentation](https://seaborn.pydata.org/)
+- [Scikit-learn Documentation](https://scikit-learn.org/stable/)
+- [Towards Data Science](https://towardsdatascience.com/)
+- [Analytics Vidya](https://www.analyticsvidhya.com/)
+- [StackOverflow](https://stackoverflow.com/)
+- [Wikipedia](https://en.wikipedia.org/)
+- [Google Data Analytics Professional](https://www.coursera.org/professional-certificates/google-data-analytics)
