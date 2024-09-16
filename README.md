@@ -1,121 +1,84 @@
-![download](https://github.com/user-attachments/assets/0611a289-acc7-4c67-8b76-e4bf21ca6ddb)
+# 📈 Yes Bank Stock Closing Price Prediction
 
+![Yes Bank Stock](https://github.com/your-profile/Yes-Bank-Stock-Closing-Price-Prediction/image-link.jpg)
 
-# Yes-Bank-Stock-Closing-Price-Prediction
-This Projet based on regression algorithms 
+This project aims to predict the closing prices of Yes Bank stocks using various regression algorithms. The analysis explores how stock trends evolve over time, and multiple models are compared to find the best performing one for production.
 
+---
 
-This project aims to predict closing prices of stock using regression models. The following points explains the summary of this regression project.
+## 📊 Project Overview
 
-**<u>Exploratory Data Analysis (EDA)</u>:** In this step, the data was visualized and analysed to gain insights into the data. This step involved data cleaning and data pre-processing. The data was checked for missing values, duplicate records, and outliers. Data visualization techniques were used to identify patterns, trends, and relationships in the data.
+The project focuses on predicting stock prices based on historical data. Regression techniques were implemented to build models, and their performances were evaluated using error metrics like Mean Squared Error (MSE), Mean Absolute Error (MAE), and R-squared (R²).
 
-**<u>Scrubing:</u>** After the EDA, the data was cleaned up by removing missing values, duplicates, and outliers. The data was standardized, and features were normalized.
+![Stock Price Trend](https://github.com/your-profile/Yes-Bank-Stock-Closing-Price-Prediction/another-image-link.jpg)
 
-**<u>Feature Engineering:</u>** In this step, new features were created from the existing data to improve the accuracy of the models. Features such as Year, Month, Quarter where created.
+---
 
-**<u>Pre-processing:</u>** In this step, the data was prepared for model implementation. The data was split into training and testing datasets. The training dataset was used to train the model, while the testing dataset was used to evaluate the performance of the model.
+## 📝 Key Steps
 
+### 1. **Exploratory Data Analysis (EDA)**
+- Visualized stock data to identify patterns, trends, and relationships.
+- Cleaned data by handling missing values, outliers, and duplicate records.
+- Applied data visualization techniques to better understand the features and target variable.
+  
+![EDA Visualization](https://github.com/your-profile/Yes-Bank-Stock-Closing-Price-Prediction/eda-image-link.jpg)
 
-<u>**Model implementation:</u>** In this step, regression models were implemented to predict stock prices. Various regression models such as Linear Regression, Random Forest Regression, and Gradient Boosting Regression were trained on the dataset. The performance of each model was evaluated using metrics such as mean squared error (MSE), mean absolute error (MAE), and R-squared, also performed the cross-validation so that we can assess the performance of model when expose to unseen data. After considering all the indicator and matric we have chosen the Optimal_RandomForest model as final model to implement in production.
+### 2. **Data Scrubbing & Pre-processing**
+- Removed duplicates and missing values, and performed outlier detection.
+- Normalized and standardized features to prepare the dataset for modeling.
+- Split the data into training and test sets for evaluation purposes.
 
+### 3. **Feature Engineering**
+- Created new features such as Year, Month, and Quarter to enhance model accuracy.
+  
+![Feature Engineering](https://github.com/your-profile/Yes-Bank-Stock-Closing-Price-Prediction/feature-engineering-image-link.jpg)
 
-<u>**Model explainability:</u>** In this step, the models were analysed to understand the factors that influence the prediction of stock prices using the SHAP explain ability tool. The feature importance was analysed, and the models were interpreted to explain the relationship between the features and the predicted values.
+### 4. **Model Implementation**
+- Implemented and compared various regression models including:
+  - Linear Regression
+  - Ridge & Lasso Regression
+  - Polynomial Regression
+  - Random Forest Regressor
+  - XGBoost Regressor
+- Cross-validated each model and assessed their performance using error metrics.
 
+### 5. **Model Explainability**
+- Used SHAP (SHapley Additive exPlanations) to interpret feature importance and explain the model predictions.
+- Discovered that OHL features and Year were the most significant contributors to stock price predictions.
 
+---
 
-1.   Well-structured, formatted, and commented code is required.
-2.   Exception Handling, Production Grade Code & Deployment Ready Code will be a plus. Those students will be awarded some additional credits.
-     
-     The additional credits will have advantages over other students during Star Student selection.
-       
-             [ Note: - Deployment Ready Code is defined as, the whole .ipynb notebook should be executable in one go
-                       without a single error logged. ]
+## 📉 Final Model
 
-3.   Each and every logic should have proper comments.
-4. You may add as many number of charts you want. Make Sure for each and every chart the following format should be answered.
-        
+After cross-validation and comparison, the **Random Forest Regressor** was selected as the optimal model due to its superior performance with a mean CV score of **95.77%**. The model was then saved using `joblib` for future predictions.
 
-```
-# Chart visualization code
-```
-            
+---
 
-*   Why did you pick the specific chart?
-*   What is/are the insight(s) found from the chart?
-* Will the gained insights help creating a positive business impact?
-Are there any insights that lead to negative growth? Justify with specific reason.
+## 🔍 Insights & Conclusions
 
-5. You have to create at least 15 logical & meaningful charts having important insights.
+1. **Stock Trends**:
+   - Significant price drop after 2018.
+   - Sudden rise in stock price in 2014.
+   
+2. **COVID-19 Impact**: 
+   - Less significant than expected; the 2020 scam had a more pronounced effect on stock prices.
+   
+3. **Model Performance**:
+   - Lasso Regression outperformed Linear and Ridge Regression.
+   - RandomForest and XGBoost models showed the best performance, with RandomForest being chosen for production.
 
+---
 
-[ Hints : - Do the Vizualization in  a structured way while following "UBM" Rule.
+## 📈 Visualizations
 
-U - Univariate Analysis,
+Throughout the project, multiple visualizations were created to support data analysis. Below are some key charts:
 
-B - Bivariate Analysis (Numerical - Categorical, Numerical - Numerical, Categorical - Categorical)
+```python
+# Example code for visualizing stock price trends
+import matplotlib.pyplot as plt
 
-M - Multivariate Analysis
- ]
-
-
-
-
-
-6. You may add more ml algorithms for model creation. Make sure for each and every algorithm, the following format should be answered.
-
-
-*   Explain the ML Model used and it's performance using Evaluation metric Score Chart.
-
-
-*   Cross- Validation & Hyperparameter Tuning
-
-*   Have you seen any improvement? Note down the improvement with updates Evaluation metric Score Chart.
-
-*   Explain each evaluation metric's indication towards business and the business impact pf the ML model used.
-
-
-
-
-## Conclusion
-
-1. The yes bank stock price dataset does not contain any null/missing value, also it's free form outliers.
-2. While doing data visualization and cleaning we came to the following conclusion:
-
-    * Some of the features are right-skewed so we have performed the log transformation.
-    * The dependent variable having string linear correlation with all independent variables.
-    * There is high-multicollinearity present in the data, so we introduce some new features.
-    * There is sudden drop in the value of stock after 2018
-    * We have seen the sudden increase in the price of stock in 2014 in a window of 10 months.
-    * The VIFs values are extremely large, so we drop some features to reduce the VIFs scores.
-    * We used the StandardScaler to scale our features.
-3. In the hypothesis testing we mostly find the status quo, and one important conclusion is that the impact of COVID-19 is less as compared to the scam in 2020.
-4. We have implemented the following regression models, so that we can assure that we get the best fit model.
-    1. Linear Regression
-    2. Ridge Regression
-    3. Lasso Regression
-    4. Polynomial Fit
-    5. Random Forest Regressor
-eXtreme Gradient Boosting (XGBoost) Regressor.
-5. Upon implementing the given regression models, we came to the following important conclusions:
-
-* The Lasso performed better when compared to linear, ridge, polyfit.
-Polynomial fit performed bad in cross-validation as it shows the sign of overfitting.
-* The RandomForest and XGBoost are the final nominees for the model selection. as their overall performance in all matrices and in cross-validation are good compared to others.
-Finally we choose the RandomForest regressor, taking into consideration time-complexity and cross-validation score (mean CV = 95.77).
-* After model selection we used SHAP score to explain the model by using various plots, and came to know that OHL feature dominates the other feature as its correlation with DV is high and the second most important feature is Year.
-* At the end of the project we save our selected model in joblib and perform some sanity checks.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+plt.plot(df['Date'], df['Closing_Price'])
+plt.title('Stock Closing Prices Over Time')
+plt.xlabel('Date')
+plt.ylabel('Closing Price')
+plt.show()
