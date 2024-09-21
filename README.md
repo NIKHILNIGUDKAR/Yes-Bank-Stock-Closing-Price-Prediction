@@ -59,10 +59,8 @@ After comparing six regression models, we concluded that **Optimal_RandomForest*
 
 Feel free to reach out through the following platforms:
 
-- **[GitHub](https://github.com/YourProfile)**
-- **Email: your.email@example.com**
-- **[Twitter](https://twitter.com/yourprofile)**
-- **[LinkedIn](https://www.linkedin.com/in/yourprofile/)**
+- **Email: nikhilngdkr@gmail.com**
+
 
 --------------------------------------------------------------------------------------------
 
